@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Lucas Rosselli</title>
+    <title>Mi Portafolio SPA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <nav>
         <ul>
-            <li><a href="#" data-target="inicio" class="nav-link activate">Home</a></li>
-            <li><a href="#" data-target="sobre-mi" class="nav-link">Proyectos</a></li>
-            <li><a href="#" data-target="proyectos" class="nav-link">Contacto</a></li>
+            <li><a href="#" data-target="inicio" class="nav-link active">Inicio</a></li>
+            <li><a href="#" data-target="sobre-mi" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#" data-target="proyectos" class="nav-link">Proyectos</a></li>
             <li><a href="#" data-target="contacto" class="nav-link">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="inicio" class="csection activate">
-            <h1>Hola, soy Lucas Rosselli</h1>
-            <p>Tecnico en programación y Desarrollador web</p>
+        <section id="inicio" class="section active">
+            <h1>Hola, soy [Tu Nombre]</h1>
+            <p>Desarrollador Web</p>
         </section>
 
         <section id="sobre-mi" class="section">
             <h2>Sobre Mí</h2>
-            <p>Tengo experiencia en desarrollo web, aplicaciones móviles y diseño de interfaces. Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente.</p>
+            <p>Texto de prueba para la sección sobre mí.</p>
         </section>
 
         <section id="proyectos" class="section">
@@ -32,45 +33,34 @@
             <div class="bento-grid">
                 <article class="bento-item item-destacado">
                     <div class="contenido">
-                        <h3>E-commerce Completo</h3>
-                        <p>Tienda online con carrito de compras dinámico y cálculo de totales.</p>
-                        <span class="tech-tag">JavaScript Avanzado</span>
-                    </div>
-                    <div class="enlaces">
-                        <a href="#" class ="btn-demo">Demo</a>
-                        <a href="#" class ="btn-repo">GitHub</a>
+                        <h3>Landing Page con Carrito</h3>
+                        <p>Simulación de un e-commerce completo. Interfaz de venta de artículos de Fórmula 1 con gestión del carrito de compras, cálculo de totales y manipulación avanzada del DOM.</p>
+                        <div class="tags"><span class="tech-tag">JS Avanzado</span></div>
                     </div>
                 </article>
                 <article class="bento-item">
-                    <div class="conteido">
-                        <h3>App de Clima</h3>
-                        <p>Consumo de API externa para mostrar el clima en tiempo real.</p>
-                    </div>
-                </article>
-
-                <article class =bento-item>
-                    <div class ="contenido">
-                        <h3>Gestor de Tareas</h3>
-                        <p>Lista To-Do clásica con guardado local (localStorage).</p>
-                    </div>
-                </article>
-
-                <article class="bento-item item-largo">
                     <div class="contenido">
-                        <h3>Generador de Carruseles RRSS</h3>
-                        <p>Herramienta web para diseñar y previsualizar carruseles de Instagram</p>
-                        <span class="tech-tag">HTML + CSS + JS</span>
-                    </div>
-                    <div class="enlaces">
-                        <a href="#" class ="btn-demo">Demo</a>
+                        <h3>Buscador de Películas</h3>
+                        <p>Aplicación que consume la API de OMDB. Permite buscar títulos y ver pósters.</p>
+                        <span class="tech-tag">Fetch API</span>
                     </div>
                 </article>
+                <article class="bento-item">
+                    <div class="contenido">
+                        <h3>Gestor de Tareas</h3>
+                        <p>Aplicación interactiva con filtrado y guardado persistente.</p>
+                        <span class="tech-tag">DOM & LocalStorage</span>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section id="contacto" class="section">
-            <h1>Contacto</h1>
-            <p>Puedes contactarme a través de mi correo electrónico:
+            <h2>Contacto</h2>
+            <p>Formulario o links a tus redes.</p>
+        </section>
     </main>
+
     <script src="app.js"></script>
 </body>
 </html>
