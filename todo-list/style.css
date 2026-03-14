@@ -28,3 +28,31 @@ h1{
     gap: 10px;
     margin-bottom: 20px;
 } 
+
+#input-tarea {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#input-tarea:focus{
+    border-color: #3CAF50;
+}
+
+#btn-agregar {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#btn-agregar:hover{
+    background-color: #45a049;
+}
