@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-target="inicio" class="nav-link active">Inicio</a></li>
+            <li><a href="#" data-target="sobre-mi" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#" data-target="proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#" data-target="contacto" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="inicio" class="section activate">
+            <h1>Hola, soy Lucas Rosselli</h1>
+            <p>Tecnico en programación y Desarrollador web</p>
+        </section>
+
+        <section id="sobre-mi" class="section">
+            <h2>Sobre Mí</h2>
+            <p>Texto de prueba para la sección sobre mí.</p>
+        </section>
+
+        <section id="proyectos" class="section">
+            <h2>Mis Proyectos</h2>
+            <div class="bento-grid">
+                <article class="bento-item item-destacado">
+                    <div class="contenido">
+                        <h3>Landing Page con Carrito</h3>
+                        <p>Simulación de un e-commerce completo. Interfaz de venta de artículos de Fórmula 1 con gestión del carrito de compras, cálculo de totales y manipulación avanzada del DOM.</p>
+                        <div class="tags"><span class="tech-tag">JS Avanzado</span></div>
+                    </div>
+                </article>
+                <article class="bento-item">
+                    <div class="contenido">
+                        <h3>Buscador de Películas</h3>
+                        <p>Aplicación que consume la API de OMDB. Permite buscar títulos y ver pósters.</p>
+                        <span class="tech-tag">Fetch API</span>
+                    </div>
+                </article>
+                <article class="bento-item">
+                    <div class="contenido">
+                        <h3>Gestor de Tareas</h3>
+                        <p>Aplicación interactiva con filtrado y guardado persistente.</p>
+                        <span class="tech-tag">DOM & LocalStorage</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <p>Formulario o links a tus redes.</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

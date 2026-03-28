@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="contenedor-app">
+        <header>
+            <h1>Mis Tareas</h1>
+            <div class="input-grupo">
+                <input type="text" id="input-tarea" placeholder='¿Qué necesitas hacer hoy?'>
+                <button id="btn-agregar">Añadir</button>
+            </div>
+        </header>
+
+        <ul id="lista-tareas">
+            <li class="tarea">
+                <span class="texto">Reunión con mi hermana para definir clientes de la agencia</span>
+                <button class="btn-borrar">❌</button>
+            </li>
+            <li class="tarea">
+                <span class="texto">Configurar bitrate y audio en OBS para el stream</span>
+                <button class="btn-borrar">❌</button>
+            </li>
+            <li class="tarea completada">
+                <span class="texto">Terminar edición de video para el broker financiero</span>
+                <button class="btn-borrar">❌</button>
+            </li>
+        </ul>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
