@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor-buscador {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #e50914; 
+    margin-bottom: 5px;
+}
+
+.caja-busqueda {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+#input-busqueda {
+    padding: 12px 20px;
+    width: 60%;
+    max-width: 400px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+#btn-buscar {
+    padding: 12px 25px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#btn-buscar:hover {
+    background-color: #f40612;
+}
+
+#mensaje-error {
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.tarjeta-peli {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-peli:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta-peli img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.tarjeta-peli h3 {
+    font-size: 1.1rem;
+    margin: 15px 10px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tarjeta-peli p {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}

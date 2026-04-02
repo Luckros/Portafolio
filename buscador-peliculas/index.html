@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Películas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="contenedor-buscador">
+        <header>
+            <h1>Buscador de Películas</h1>
+            <p>Encontra tus péliculas favoritas al momento</p>
+            <div class="caja-busqueda">
+                <input type="text" id="input-busqueda" placeholder="Star Wars, El Padrino, Pulp Fiction, ect.">
+                <button id="btn-buscar">Buscar</button>
+            </div>
+        </header>
+
+        <section id="resultados" class="resultados-grid">
+            <div class="tarjetas-peli">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=300&h=450&fit=crop" alt="Poster de la película">
+                <h3>Nombre de la Película</h3>
+                <p>Año: 2026</p>
+            </div>
+        </section>
+
+        <div id="mensaje-error" class="oculto"></div>
+    </main>
+
+    <script src="app.js"></script>
+
+
+</body>
+</html>
