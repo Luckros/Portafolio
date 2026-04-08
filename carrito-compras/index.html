@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="navbar">
+        <div class="logo">Tienda<span>Tech</span></div>
+        <div class="icono-carrito" id="btn-abir-carrito">🛒 <span id="contador-carrito">0</span></div>
+
+    </header>
+    <main class="contenedor-tienda">
+        <h1>Nuestros Productos</h1>
+        <section id="contenedor-productos" class="grid-productos"></section>
+        <div>
+        <img src="https://via.placeholder.com/200" alt="Producto">
+        <h3>Auriculares Inalámbricos</h3>
+        <p class="precio">$50.00</p>
+        <button class="btn-agregar">Agregar al Carrito</button>    
+        </div>
+    </main>
+
+    <aside id="ventana-carrito" class="carrito-oculto">
+        <div class="cabecera-carrito">
+            <h2>Tu Carrito</h2>
+            <button id="btn-cerrar-carrito">❌</button>
+        </div>
+
+        <div class="pie-carrito">
+            <h3>Total: $<span id="precio-total">0.00</span></h3>
+            <button id="btn-comprar" class="btn-comprar">Finalizar Compra</button>
+        </div>
+    </aside>
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
