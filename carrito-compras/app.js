@@ -26,3 +26,15 @@ function renderizarProductos() {
 }
 
 renderizarProductos();
+
+const btnAbrirCarrito = document.getElementById('btn-abrir-carrito');
+const btnCerrarCarrito = document.getElementById('btn-cerrar-carrito');
+const ventanaCarrito = document.getElementById('ventana-carrito');
+
+btnAbrirCarrito.addEventListener('click', () => {
+    ventanaCarrito.classList.remove('carrito-oculto')
+});
+
+btnCerrarCarrito.addEventListener('click', () => {
+    ventanaCarrito.classList.add('carrito-oculto')
+});
