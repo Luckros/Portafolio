@@ -1,8 +1,28 @@
 const inventario = [
-    { id: 1, nombre: "Auriculares Inalámbricos", precio: 50.00, imagen: "https://placehold.co/200x200/222/FFF?text=Auriculares" },
-    { id: 2, nombre: "Reloj Inteligente", precio: 120.00, imagen: "https://placehold.co/200x200/222/FFF?text=Smartwatch" },
-    { id: 3, nombre: "Teclado Mecánico", precio: 85.00, imagen: "https://placehold.co/200x200/222/FFF?text=Teclado" },
-    { id: 4, nombre: "Ratón Gamer", precio: 45.00, imagen: "https://placehold.co/200x200/222/FFF?text=Mouse" }
+    { 
+        id: 1, 
+        nombre: "Auriculares Inalámbricos", 
+        precio: 50.00, 
+        imagen: "./img/auriculares.jpeg"
+    },
+    { 
+        id: 2, 
+        nombre: "Reloj Inteligente", 
+        precio: 120.00, 
+        imagen: "./img/reloj.png" 
+    },
+    { 
+        id: 3, 
+        nombre: "Teclado Mecánico", 
+        precio: 85.00, 
+        imagen: "./img/teclado.jpg" 
+    },
+    { 
+        id: 4, 
+        nombre: "Mouse Gamer", 
+        precio: 45.00, 
+        imagen: "./img/mouse.jpeg" 
+    }
 ];
 
 let carrito = [];
@@ -59,16 +79,37 @@ function agregarAlCarrito(idProducto) {
 function renderizarCarrito() {
     listaCarrito.innerHTML = '';
     contadorCarrito.textContent = carrito.length;
-    carrito.forEach(producto => {
+    carrito.forEach((producto, index) => {
         const item = document.createElement('div');
+        item.classList.add('item-carrito');
         item.innerHTML = `
             <p>🛒 <strong>${producto.nombre}</strong> - $${producto.precio}</p>
-            <hr>
+            <button class="btn-eliminar" title="Quitar del carrito">❌</button>
         `;
         listaCarrito.appendChild(item);
+        const botonEliminar = item.querySelector('.btn-eliminar');
+        botonEliminar.addEventListener('click', () => {
+            eliminarDelCarrito(index);
+        });
     });
     const total = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
-precioTotal.textContent = total.toFixed(2);
+    precioTotal.textContent = total.toFixed(2);
 
 }
+
+function eliminarDelCarrito(indice) {
+    carrito.splice(indice, 1);
+    renderizarCarrito();
+}
+
+const btnComprar = document.getElementById('btn-comprar');
+btnComprar.addEventListener('click', () => {
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de comprar.");
+        return;
+    }
+    alert("Pago procesado con éxtio. ¡Gracias por tu compra!");
+    carrito = [];
+    renderizarCarrito();
+});
 

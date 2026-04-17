@@ -67,7 +67,9 @@ body {
 }
 
 .tarjeta-producto img {
-    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -95,8 +97,10 @@ body {
 
 #ventana-carrito {
     position: fixed;
+    top: 0;
     right: 0;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: 100vh;
     background-color: white;
     box-shadow: -5px 0 15px rgba(0,0,0,0.2);
@@ -105,6 +109,7 @@ body {
     flex-direction: column;
     z-index: 1000;
     transition: transform 0.3s ease-in-out; 
+    box-sizing: border-box;
 }
 
 .carrito-oculto {
@@ -145,7 +150,7 @@ body {
 }
 
 .btn-comprar {
-    background-color: #28a745; /* Verde compra */
+    background-color: #28a745;
     color: white;
     border: none;
     padding: 15px;
@@ -158,4 +163,30 @@ body {
 
 .btn-comprar:hover {
     background-color: #218838;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.item-carrito p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.btn-eliminar:hover {
+    transform: scale(1.2);
 }
