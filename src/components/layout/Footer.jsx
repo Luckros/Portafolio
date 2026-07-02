@@ -12,7 +12,7 @@ export default function Footer() {
           href="mailto:hola@tudominio.com"
           className="subrayado-terracota text-tierra hover:text-terracota"
         >
-          hola@tudominio.com
+          lucasarosselli@gmail.com
         </a>
         <p className="mt-4 font-mono text-xs text-tierra/70">
           © {ANIO} · Diseñado y desarrollado a mano, en Buenos Aires.
