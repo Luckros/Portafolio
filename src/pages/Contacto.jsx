@@ -52,12 +52,26 @@ export default function Contacto() {
     if (Object.keys(erroresValidacion).length > 0) return;
 
     setEstadoEnvio("enviando");
-    // Conectá esto a tu servicio real (Formspree, Resend, tu propio backend, etc.)
-    // Por ahora simula el envío para no romper el formulario en desarrollo.
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setEstadoEnvio("enviado");
-    setValores(ESTADO_INICIAL);
-  }
+    try {
+      const respuesta = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(valores),
+      });
+
+      if (!respuesta.ok) {
+        const data = await respuesta.json().catch(() => ({}));
+        setErrores(data.errores ?? {});
+        setEstadoEnvio("error");
+        return;
+      }
+
+      setEstadoEnvio("enviado");
+      setValores(ESTADO_INICIAL);
+    } catch (error) {
+      setEstadoEnvio("error");
+    }
+}
 
   return (
     <main id="contenido-principal">
@@ -160,6 +174,11 @@ export default function Contacto() {
                 {estadoEnvio === "enviado" &&
                   "¡Gracias! Recibí tu mensaje y te voy a responder a la brevedad."}
               </p>
+              {estadoEnvio === "error" && (
+                <p role="alert" className="text-sm text-terracota-deep">
+                   Algo falló al enviar el mensaje. Probá de nuevo o escribime directamente a mi email.
+                   </p>
+                  )}
             </div>
           </form>
 
