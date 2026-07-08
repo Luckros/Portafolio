@@ -31,7 +31,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: "Portafolio <lucasarosselli@gmail.com>", // reemplazar por tu dominio verificado
+      from: "Portafolio <onboarding@resend.dev>", // reemplazar por tu dominio verificado
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: valores.email,
       subject: `Nuevo contacto de ${valores.nombre}`,
