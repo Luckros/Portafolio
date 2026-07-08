@@ -53,18 +53,14 @@ export default function Contacto() {
 
     setEstadoEnvio("enviando");
     try {
-      const response = await fetch('/api/contacto', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-        nombre: formData.name,
-        email: formData.email,
-      mensaje: formData.message
-  }),
-});
+      const respuesta = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(valores),
+      });
 
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
+      if (!respuesta.ok) {
+        const data = await respuesta.json().catch(() => ({}));
         setErrores(data.errores ?? {});
         setEstadoEnvio("error");
         return;
