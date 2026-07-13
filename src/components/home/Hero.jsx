@@ -37,7 +37,7 @@ export default function Hero() {
           </Link>
 
           <a
-            href="/cv-nombre-apellido.pdf"
+            href="/CV-Lucas-Rosselli.pdf"
             className="inline-flex items-center justify-center gap-2 rounded-ficha border border-bronce/50 px-6 py-3 text-sm font-medium text-ink transition-colors duration-200 ease-estable hover:border-azul-colonial hover:text-azul-colonial"
           >
             Descargar CV
