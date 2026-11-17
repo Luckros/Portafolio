@@ -33,6 +33,12 @@ const TRAYECTORIA = [
       "Pasé a React para construir interfaces con estado más complejo, pero sin perder de vista que cada decisión técnica tiene que servir a un objetivo de negocio medible: conversión, retención, performance.",
   },
   {
+    etapa: "Emprendimiento",
+    titulo: "Forja Pixel",
+    texto:
+      "Armé mi propio estudio de desarrollo web para negocios que venden por WhatsApp e Instagram: landing pages a medida, pensadas para el celular y con un solo objetivo, que el cliente escriba.",
+  },
+  {
     etapa: "Hoy",
     titulo: "Ingeniería con criterio",
     texto:

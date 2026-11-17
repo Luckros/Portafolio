@@ -61,10 +61,68 @@ export const proyectosReact = [
   },
 ];
 
+export const proyectosForjaPixel = [
+  {
+    id: "forja-pixel",
+    numero: "04",
+    titulo: "Forja Pixel",
+    categoria: "React · Estudio",
+    resumen:
+      "Mi estudio de desarrollo web: landing pages rápidas para negocios que hoy venden por WhatsApp e Instagram.",
+    enfoqueProducto:
+      "Una sola acción por página: llevar al visitante que llega desde Instagram directo al WhatsApp del negocio.",
+    focoTecnico: [
+      "Landing de una sola página construida con React y Vite",
+      "Botones de WhatsApp con el mensaje ya escrito",
+      "Diseño mobile-first para tráfico que llega desde Instagram",
+      "Secciones de proceso, servicios y preguntas frecuentes",
+    ],
+    stack: ["React", "Vite", "Vercel"],
+    url: "https://forja-pixel-site.vercel.app/",
+    tipo: "produccion",
+  },
+  {
+    id: "fogon-de-beto",
+    numero: "05",
+    titulo: "Fogón de Beto",
+    categoria: "Demo · Gastronomía",
+    resumen:
+      "Sitio de muestra de una parrilla de barrio: el cliente arma su pedido desde la carta y lo envía por WhatsApp.",
+    enfoqueProducto:
+      "Reemplazar el ida y vuelta por chat con un pedido completo y prolijo que llega listo al WhatsApp del local.",
+    focoTecnico: [
+      "Carta con contador por plato y total en vivo",
+      "Comanda con retiro o envío y aclaraciones",
+      "Mensaje de WhatsApp generado con el pedido completo",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    url: "https://fogon-de-beto-site.vercel.app/",
+    tipo: "demo",
+  },
+  {
+    id: "otono",
+    numero: "06",
+    titulo: "Otoño",
+    categoria: "Demo · Gastronomía",
+    resumen:
+      "Sitio de muestra de un restaurante de temporada donde reservar mesa lleva un toque.",
+    enfoqueProducto:
+      "Que reservar sea más rápido que llamar: comensales, día y horario en una pantalla y la reserva sale armada por WhatsApp.",
+    focoTecnico: [
+      "Selector de comensales, fechas y horarios disponibles",
+      "Fechas generadas dinámicamente hasta 30 días adelante",
+      "Reserva enviada por WhatsApp con el mensaje armado",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    url: "https://otono-site.vercel.app/",
+    tipo: "demo",
+  },
+];
+
 export const proyectosFundacionales = [
   {
     id: "ecommerce-shopping-cart",
-    numero: "04",
+    numero: "07",
     titulo: "E-Commerce App",
     categoria: "Vanilla JS · Fundacional",
     resumen: "Carrito de compras con gestión de estado en tiempo real sin frameworks.",
@@ -79,7 +137,7 @@ export const proyectosFundacionales = [
   },
   {
     id: "movie-search-app",
-    numero: "05",
+    numero: "08",
     titulo: "Movie Search App",
     categoria: "Vanilla JS · Fundacional",
     resumen: "Buscador de películas consumiendo la API pública de OMDB.",
@@ -94,7 +152,7 @@ export const proyectosFundacionales = [
   },
   {
     id: "task-manager",
-    numero: "06",
+    numero: "09",
     titulo: "Task Manager",
     categoria: "Vanilla JS · Fundacional",
     resumen: "Gestor de tareas con operaciones CRUD completas y persistencia en sesión.",
@@ -109,4 +167,8 @@ export const proyectosFundacionales = [
   },
 ];
 
-export const todosLosProyectos = [...proyectosReact, ...proyectosFundacionales];
+export const todosLosProyectos = [
+  ...proyectosReact,
+  ...proyectosForjaPixel,
+  ...proyectosFundacionales,
+];

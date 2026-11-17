@@ -1,4 +1,8 @@
-import { proyectosReact, proyectosFundacionales } from "../data/projects";
+import {
+  proyectosReact,
+  proyectosForjaPixel,
+  proyectosFundacionales,
+} from "../data/projects";
 import ProjectCard from "../components/proyectos/ProjectCard";
 import RejaDivider from "../components/ui/RejaDivider";
 
@@ -15,9 +19,10 @@ export default function Proyectos() {
             Cada proyecto es un caso de estudio, no una demo.
           </h1>
           <p className="mt-4 max-w-xl text-tierra">
-            Organizado en dos etapas: los productos en React que reflejan cómo
-            trabajo hoy, y los proyectos fundacionales en JavaScript puro que
-            muestran de dónde vengo.
+            Organizado en tres bloques: los productos en React que reflejan cómo
+            trabajo hoy, Forja Pixel, mi estudio de desarrollo web, con sus
+            sitios de muestra, y los proyectos fundacionales en JavaScript puro
+            que muestran de dónde vengo.
           </p>
         </div>
       </section>
@@ -41,7 +46,32 @@ export default function Proyectos() {
 
       <RejaDivider />
 
-      {/* Etapa 2 — Vanilla JS */}
+      {/* Etapa 2 — Forja Pixel */}
+      <section className="py-20" aria-labelledby="forja-titulo">
+        <div className="mx-auto max-w-6xl px-6">
+          <header className="mb-10 flex items-baseline gap-4">
+            <span className="font-mono text-xs text-bronce">Etapa 02</span>
+            <h2 id="forja-titulo" className="font-display text-2xl text-ink">
+              Forja Pixel — mi estudio de desarrollo web
+            </h2>
+          </header>
+          <p className="mb-10 max-w-2xl text-sm text-tierra">
+            Forja Pixel es mi marca para hacer landing pages y software a
+            medida. Además del sitio del estudio, armé estas webs como piezas
+            de muestra: los negocios son ficticios, pero el diseño y el código
+            son los que entrego a un cliente.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {proyectosForjaPixel.map((proyecto) => (
+              <ProjectCard key={proyecto.id} proyecto={proyecto} compacta />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <RejaDivider />
+
+      {/* Etapa 0 — Vanilla JS */}
       <section className="py-20" aria-labelledby="fundacionales-titulo">
         <div className="mx-auto max-w-6xl px-6">
           <header className="mb-10 flex items-baseline gap-4">
