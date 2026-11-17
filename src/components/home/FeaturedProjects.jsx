@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-import { proyectosReact } from "../../data/projects";
+import { proyectosReact, proyectosForjaPixel } from "../../data/projects";
+
+// Destacados: el estudio propio y el proyecto en producción con más peso.
+const destacados = [proyectosForjaPixel[0], proyectosReact[0]];
 import ProjectCard from "../proyectos/ProjectCard";
 
 export default function FeaturedProjects() {
@@ -24,7 +27,7 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {proyectosReact.slice(0, 2).map((proyecto) => (
+          {destacados.map((proyecto) => (
             <ProjectCard key={proyecto.id} proyecto={proyecto} compacta />
           ))}
         </div>
